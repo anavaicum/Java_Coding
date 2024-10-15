@@ -31,8 +31,8 @@ public class NotareCatalog {
         int[] rezultat= new int[note.length];
         for (int i = 0; i < note.length; i++){
             int nota=note[i];
-            if(nota<38){
-                rezultat[i]=nota;
+            if(nota<38) {
+                rezultat[i] = nota;
             }
             else{
                 int formula=((nota/5)+1)*5;
