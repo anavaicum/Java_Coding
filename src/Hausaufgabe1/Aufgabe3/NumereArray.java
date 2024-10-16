@@ -7,8 +7,8 @@ import static java.lang.Math.abs;
 
 public class NumereArray {
 
-    public static int numar_creat(int[] array) {
-        int numar=0;
+    public static long numar_creat(int[] array) {
+        long numar=0;
         for(int i=0;i<array.length;i++) {
             numar+=array[i];
             numar=numar*10;
@@ -17,34 +17,34 @@ public class NumereArray {
         return numar;
     }
 
-    public static int suma_numere(int[] array1, int[] array2) {
-       int n1=numar_creat(array1);
-       int n2=numar_creat(array2);
+    public static long suma_numere(int[] array1, int[] array2) {
+       long n1=numar_creat(array1);
+       long n2=numar_creat(array2);
        return n1+n2;
     }
 
-    public static int diferenta_numere(int[] array1, int[] array2) {
-        int n1=numar_creat(array1);
-        int n2=numar_creat(array2);
+    public static long diferenta_numere(int[] array1, int[] array2) {
+        long n1=numar_creat(array1);
+        long n2=numar_creat(array2);
         return abs(n1-n2);
     }
 
-    public static int produs_numere(int[] array1, int[] array3) {
-        int n1=numar_creat(array1);
-        int n3=numar_creat(array3);
+    public static long produs_numere(int[] array1, int[] array3) {
+        long n1=numar_creat(array1);
+        long n3=numar_creat(array3);
         return n1*n3;
     }
 
-    public static int impartire_numere(int[] array1, int[] array3) {
-        int n1=numar_creat(array1);
-        int n3=numar_creat(array3);
+    public static long impartire_numere(int[] array1, int[] array3) {
+        long n1=numar_creat(array1);
+        long n3=numar_creat(array3);
         return n1/n3;
     }
 
 
     public static void main(String[] args) {
-        int[] numar1={5, 2, 9, 7, 5, 1, 8};
-        int[] numar2={2, 5, 8, 3, 9, 1, 6};
+        int[] numar1={1, 3, 0, 0, 0, 0, 0, 0, 0};
+        int[] numar2={8, 7, 0, 0, 0, 0, 0, 0, 0};
 
         int[] numar3={2};
 
