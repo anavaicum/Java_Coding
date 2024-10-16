@@ -1,5 +1,3 @@
-import javax.swing.text.Utilities;
-import java.util.ArrayList;
 import java.util.Arrays;
 
 import static java.lang.Math.abs;
@@ -16,6 +14,19 @@ public class NumereArray {
         numar=numar/10;
         return numar;
     }
+
+    public static int[] transformare_array(long numar) {
+        int lungime = (int) Math.log10(numar) + 1;
+        int[] array = new int[lungime];
+
+        for (int i = lungime - 1; i >= 0; i--) {
+            array[i] = (int) (numar % 10);
+            numar = numar / 10;
+        }
+
+        return array;
+    }
+
 
     public static long suma_numere(int[] array1, int[] array2) {
        long n1=numar_creat(array1);
@@ -51,11 +62,13 @@ public class NumereArray {
         System.out.println(numar_creat(numar1));
         System.out.println(numar_creat(numar2));
 
-        System.out.println(suma_numere(numar1, numar2));
-        System.out.println(diferenta_numere(numar1, numar2));
+        System.out.println(Arrays.toString(transformare_array(suma_numere(numar1, numar2))));
+        System.out.println(Arrays.toString(transformare_array(diferenta_numere(numar1, numar2))));
 
-        System.out.println(produs_numere(numar1, numar3));
-        System.out.println(impartire_numere(numar1, numar3));
+        System.out.println(Arrays.toString(transformare_array(produs_numere(numar1, numar3))));
+
+        System.out.println(Arrays.toString(transformare_array(impartire_numere(numar1, numar3))));
+
 
     }
 }
