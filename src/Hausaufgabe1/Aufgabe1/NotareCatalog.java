@@ -23,8 +23,7 @@ public class NotareCatalog {
         for (int nota: note){
             suma=suma+nota;
         }
-        double media=suma/ note.length;
-        return media;
+        return (double)suma/note.length;
     }
 
     public static int[] returneaza_note_rotunjite(int[] note){
@@ -62,13 +61,13 @@ public class NotareCatalog {
 
 
     public static void main(String[] args) {
-        int[] notele={29, 67, 38, 44, 37, 15, 88};
+        int[] notele={29, 37, 38, 41, 84, 67};
 
         int[] lista_insuf= note_insuficiente(notele);
         System.out.println(Arrays.toString(lista_insuf));
 
         double media = media_notelor(notele);
-        System.out.println(media);
+        System.out.printf("%.2f%n", media);
 
         int[] note_rotunde= returneaza_note_rotunjite(notele);
         System.out.println(Arrays.toString(note_rotunde));
